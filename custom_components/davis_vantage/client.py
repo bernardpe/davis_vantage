@@ -97,6 +97,11 @@ class DavisVantageClient:
     async def connect_to_station(self):
         self._vantagepro2 = await self.async_get_vantagepro2fromurl(self.get_link())  # type: ignore
 
+    async def ensure_connected(self) -> None:
+        """Ensure a station connection object exists before station I/O."""
+        if self._vantagepro2 is None:
+            await self.connect_to_station()
+
     async def get_station_info(self):
         static_info = await self.async_get_static_info()
         self._firmware_version = (
@@ -123,7 +128,9 @@ class DavisVantageClient:
         start_readout = datetime.now()
 
         if not self._vantagepro2:
-            self.get_vantagepro2fromurl(self.get_link())
+            self._vantagepro2 = self.get_vantagepro2fromurl(self.get_link())
+        if not self._vantagepro2:
+            raise RuntimeError("Could not initialize Davis station connection")
 
         try:
             self._vantagepro2.link.open()

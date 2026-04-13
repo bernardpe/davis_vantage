@@ -92,6 +92,8 @@ class DavisVantageBinarySensor(
         """Return the is_on of the sensor."""
         key = self.entity_description.key
         data = self.coordinator.data
+        if not data:
+            return None
         if key not in data:
             return None
         return data.get(key, False)  # type: ignore

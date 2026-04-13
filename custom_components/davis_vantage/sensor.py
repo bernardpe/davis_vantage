@@ -692,4 +692,7 @@ class DavisVantageSensor(CoordinatorEntity[DavisVantageDataUpdateCoordinator], S
     @property
     def native_value(self) -> StateType:  # type: ignore
         """Return the state of the sensor."""
-        return self.coordinator.data.get(self.entity_description.key)
+        data = self.coordinator.data
+        if not data:
+            return None
+        return data.get(self.entity_description.key)

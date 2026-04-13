@@ -50,15 +50,13 @@ async def async_setup_entry(
     hass.data[DOMAIN]["interval"] = config_entry.data.get(CONFIG_INTERVAL, 30)
 
     client = DavisVantageClient(hass, protocol, link, persistent_connection)
-    await client.connect_to_station()
-    await client.get_station_info()
 
     device_info = DeviceInfo(
         identifiers={(DOMAIN, config_entry.entry_id)},
         manufacturer=MANUFACTURER,
         name=NAME,
         model=config_entry.data.get(CONFIG_STATION_MODEL, "Unknown"),
-        sw_version=client.firmware_version,
+        sw_version=None,
         hw_version=None,
     )
 
@@ -68,11 +66,12 @@ async def async_setup_entry(
         )
     )
 
-    await coordinator.async_config_entry_first_refresh()
-
     config_entry.runtime_data = RuntimeData(coordinator)
 
     await hass.config_entries.async_forward_entry_setups(config_entry, PLATFORMS)
+
+    # Don't block startup on a potentially slow serial handshake.
+    hass.async_create_task(coordinator.async_refresh())
 
     config_entry.async_on_unload(
         config_entry.add_update_listener(async_reload_entry)
