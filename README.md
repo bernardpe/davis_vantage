@@ -217,6 +217,7 @@ Due to the somewhat unstable hardware interface some communication runs result i
 
 ## Contributions
  * [Fred6278](https://github.com/Fred6278) &#8594; Provided the French translation file.
+ * [miisch](https://github.com/miisch) &#8594; Fixed CPU spikes.
 
 [hacs-url]: https://github.com/hacs/integration
 [hacs-badge]: https://img.shields.io/badge/hacs-default-orange.svg?style=flat-square
