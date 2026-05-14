@@ -32,3 +32,19 @@ CONFIG_MINIMAL_INTERVAL = 5
 CONFIG_PROTOCOL = "protocol"
 CONFIG_LINK = "link"
 CONFIG_PERSISTENT_CONNECTION = "persistent_connection"
+
+BEAUFORT_DESCRIPTION_STATES: dict[int, str] = {
+	0: "calm",
+	1: "light_air",
+	2: "light_breeze",
+	3: "gentle_breeze",
+	4: "moderate_breeze",
+	5: "fresh_breeze",
+	6: "strong_breeze",
+	7: "high_wind",
+	8: "gale",
+	9: "strong_gale",
+	10: "storm",
+	11: "violent_storm",
+	12: "hurricane_force",
+}

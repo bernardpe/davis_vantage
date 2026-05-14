@@ -66,6 +66,8 @@ The following entities will be created:
     - Current barometric trend, being Stable, Rising Slowly, Rising Rapidly, Falling Slowly, Falling Rapidly
 - Dew Point: 
     - Current dev point
+- Air Density:
+    - Current moist air density in kg/m3
 - Dew Point High (Day)
     - Today's highest dew point
 - Dew Point High Time
@@ -164,6 +166,8 @@ The following entities will be created:
     - Average wind speed, based on Archive Interval [^4]
 - Wind Speed (Bft): 
     - Wind Speed (Average) in Beaufort
+- Wind Speed (Bft) Description:
+    - Beaufort description based on Wind Speed (Bft), for example Calm, Moderate breeze or Gale
 
 Diagnostic entities:
 - Archive Interval: 

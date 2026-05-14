@@ -163,6 +163,32 @@ def calc_dew_point(temperature_f: float, humidity: float) -> float:
     a = math.log(humidity / 100) + (17.62 * temperature_c / (243.12 + temperature_c))
     return convert_celcius_to_fahrenheit(243.12 * a / (17.62 - a))
 
+
+def calc_air_density(
+    temperature_f: float, relative_humidity: float, pressure_inhg: float
+) -> float:
+    """Calculate moist air density in kg/m3.
+
+    Uses partial pressures for dry air and water vapor.
+    """
+    temperature_c = convert_to_celcius(temperature_f)
+    temperature_k = temperature_c + 273.15
+    pressure_hpa = pressure_inhg * 33.8638866667
+
+    saturation_vapor_pressure_hpa = 6.112 * math.exp(
+        (17.67 * temperature_c) / (temperature_c + 243.5)
+    )
+    vapor_pressure_hpa = (relative_humidity / 100) * saturation_vapor_pressure_hpa
+    dry_air_pressure_hpa = pressure_hpa - vapor_pressure_hpa
+
+    rd = 287.05
+    rv = 461.495
+    density = (
+        (dry_air_pressure_hpa * 100) / (rd * temperature_k)
+        + (vapor_pressure_hpa * 100) / (rv * temperature_k)
+    )
+    return round(density, 3)
+
 def normalize_unique_id(uid: str) -> str:
     return (
         uid.replace(" ", "_")

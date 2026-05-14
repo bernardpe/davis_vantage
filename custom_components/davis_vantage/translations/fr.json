@@ -88,6 +88,9 @@
             "dew_point": {
                 "name": "Point de rosée"
             },
+            "air_density": {
+                "name": "Densite de l'air"
+            },
             "dew_point_high_day": {
                 "name": "Point de rosée élevé (jour)"
             },
@@ -183,6 +186,24 @@
             },
             "wind_speed_bft": {
                 "name": "Vitesse du vent (Bft)"
+            },
+            "wind_speed_bft_description": {
+                "name": "Vitesse du vent (Bft) description",
+                "state": {
+                    "calm": "Calme",
+                    "light_air": "Tres legere brise",
+                    "light_breeze": "Legere brise",
+                    "gentle_breeze": "Petite brise",
+                    "moderate_breeze": "Jolie brise",
+                    "fresh_breeze": "Bonne brise",
+                    "strong_breeze": "Vent frais",
+                    "high_wind": "Grand frais",
+                    "gale": "Coup de vent",
+                    "strong_gale": "Fort coup de vent",
+                    "storm": "Tempete",
+                    "violent_storm": "Violente tempete",
+                    "hurricane_force": "Ouragan"
+                }
             },
             "rain_day": {
                 "name": "Pluie (jour)"

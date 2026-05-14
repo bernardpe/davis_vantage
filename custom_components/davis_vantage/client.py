@@ -15,6 +15,7 @@ from pyvantagepro.utils import ListDict
 from homeassistant.core import HomeAssistant
 
 from .utils import (
+    calc_air_density,
     calc_dew_point,
     calc_feels_like,
     calc_wind_chill,
@@ -29,6 +30,7 @@ from .utils import (
     get_wind_rose,
 )
 from .const import (
+    BEAUFORT_DESCRIPTION_STATES,
     RAIN_COLLECTOR_IMPERIAL,
     RAIN_COLLECTOR_METRIC,
     RAIN_COLLECTOR_METRIC_0_1,
@@ -369,6 +371,10 @@ class DavisVantageClient:
             if data["HumOut"] is not None:
                 data["HeatIndex"] = calc_heat_index(data["TempOut"], data["HumOut"])
                 data["DewPoint"] = calc_dew_point(data["TempOut"], data["HumOut"])
+                if data["Barometer"] is not None:
+                    data["AirDensity"] = calc_air_density(
+                        data["TempOut"], data["HumOut"], data["Barometer"]
+                    )
             if data["WindSpeed"] is not None:
                 data["WindChill"] = calc_wind_chill(data["TempOut"], data["WindSpeed"])
                 if data["HumOut"] is not None:
@@ -464,6 +470,12 @@ class DavisVantageClient:
             data["WindSpeedBft"] = convert_kmh_to_bft(
                 convert_to_kmh(data["WindSpeedAvg"])
             )
+            data["WindSpeedBftDescription"] = BEAUFORT_DESCRIPTION_STATES.get(
+                data["WindSpeedBft"]
+            )
+        else:
+            data["WindSpeedBft"] = None
+            data["WindSpeedBftDescription"] = None
 
     def add_hilows_info(self, hilows: HighLowParserRevB | None, data: dict[str, Any]):
         if not hilows:

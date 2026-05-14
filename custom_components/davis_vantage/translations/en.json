@@ -88,6 +88,9 @@
             "dew_point": {
                 "name": "Dew Point"
             },
+            "air_density": {
+                "name": "Air Density"
+            },
             "dew_point_high_day": {
                 "name": "Dew Point High (Day)"
             },
@@ -183,6 +186,24 @@
             },
             "wind_speed_bft": {
                 "name": "Wind Speed (Bft)"
+            },
+            "wind_speed_bft_description": {
+                "name": "Wind Speed (Bft) Description",
+                "state": {
+                    "calm": "Calm",
+                    "light_air": "Light air",
+                    "light_breeze": "Light breeze",
+                    "gentle_breeze": "Gentle breeze",
+                    "moderate_breeze": "Moderate breeze",
+                    "fresh_breeze": "Fresh breeze",
+                    "strong_breeze": "Strong breeze",
+                    "high_wind": "High wind",
+                    "gale": "Gale",
+                    "strong_gale": "Strong gale",
+                    "storm": "Storm",
+                    "violent_storm": "Violent storm",
+                    "hurricane_force": "Hurricane force"
+                }
             },
             "rain_day": {
                 "name": "Rain (Day)"

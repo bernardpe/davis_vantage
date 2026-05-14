@@ -88,6 +88,9 @@
             "dew_point": {
                 "name": "Punto di rugiada"
             },
+            "air_density": {
+                "name": "Densita dell'aria"
+            },
             "dew_point_high_day": {
                 "name": "Punto di rugiada massimo (giorno)"
             },
@@ -183,6 +186,24 @@
             },
             "wind_speed_bft": {
                 "name": "Velocità del vento (Bft)"
+            },
+            "wind_speed_bft_description": {
+                "name": "Velocità del vento (Bft) descrizione",
+                "state": {
+                    "calm": "Calma",
+                    "light_air": "Bava di vento",
+                    "light_breeze": "Brezza leggera",
+                    "gentle_breeze": "Brezza tesa",
+                    "moderate_breeze": "Vento moderato",
+                    "fresh_breeze": "Vento teso",
+                    "strong_breeze": "Vento forte",
+                    "high_wind": "Vento molto forte",
+                    "gale": "Burrasca",
+                    "strong_gale": "Burrasca forte",
+                    "storm": "Tempesta",
+                    "violent_storm": "Tempesta violenta",
+                    "hurricane_force": "Uragano"
+                }
             },
             "rain_day": {
                 "name": "Pioggia (giorno)"

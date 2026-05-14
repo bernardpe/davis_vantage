@@ -33,6 +33,7 @@ from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from . import DavisConfigEntry
 from .const import (
+    BEAUFORT_DESCRIPTION_STATES,
     DEFAULT_NAME,
     RAIN_COLLECTOR_IMPERIAL,
     RAIN_COLLECTOR_METRIC,
@@ -226,6 +227,15 @@ def get_sensor_descriptions(model: str) -> list[DavisSensorEntityDescription]:
             suggested_display_precision=2,
         ),
         DavisSensorEntityDescription(
+            key="AirDensity",
+            translation_key="air_density",
+            entity_name="Air Density",
+            icon="mdi:molecule",
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement="kg/m3",
+            suggested_display_precision=3,
+        ),
+        DavisSensorEntityDescription(
             key="BarometerHiDay",
             translation_key="barometric_pressure_high_day",
             entity_name="Barometric Pressure High (Day)",
@@ -400,6 +410,14 @@ def get_sensor_descriptions(model: str) -> list[DavisSensorEntityDescription]:
             entity_name="Wind Speed (Bft)",
             icon="mdi:weather-windy",
             device_class=SensorDeviceClass.ENUM,
+        ),
+        DavisSensorEntityDescription(
+            key="WindSpeedBftDescription",
+            translation_key="wind_speed_bft_description",
+            entity_name="Wind Speed (Bft) Description",
+            icon="mdi:weather-windy",
+            device_class=SensorDeviceClass.ENUM,
+            options=list(BEAUFORT_DESCRIPTION_STATES.values()),
         ),
         DavisSensorEntityDescription(
             key="RainDay",
@@ -695,4 +713,5 @@ class DavisVantageSensor(CoordinatorEntity[DavisVantageDataUpdateCoordinator], S
         data = self.coordinator.data
         if not data:
             return None
+
         return data.get(self.entity_description.key)

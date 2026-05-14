@@ -88,6 +88,9 @@
             "dew_point": {
                 "name": "Taupunkt"
             },
+            "air_density": {
+                "name": "Luftdichte"
+            },
             "dew_point_high_day": {
                 "name": "Höchste Taupunkt"
             },
@@ -183,6 +186,24 @@
             },
             "wind_speed_bft": {
                 "name": "Windgeschwindigkeit (Bft)"
+            },
+            "wind_speed_bft_description": {
+                "name": "Windgeschwindigkeit (Bft) Beschreibung",
+                "state": {
+                    "calm": "Windstille",
+                    "light_air": "Leiser Zug",
+                    "light_breeze": "Leichte Brise",
+                    "gentle_breeze": "Schwache Brise",
+                    "moderate_breeze": "Mäßige Brise",
+                    "fresh_breeze": "Frische Brise",
+                    "strong_breeze": "Starker Wind",
+                    "high_wind": "Steifer Wind",
+                    "gale": "Stürmischer Wind",
+                    "strong_gale": "Sturm",
+                    "storm": "Schwerer Sturm",
+                    "violent_storm": "Orkanartiger Sturm",
+                    "hurricane_force": "Orkan"
+                }
             },
             "rain_day": {
                 "name": "Regen (Tag)"

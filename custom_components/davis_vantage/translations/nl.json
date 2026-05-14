@@ -88,6 +88,9 @@
             "dew_point": {
                 "name": "Dauwpunt"
             },
+            "air_density": {
+                "name": "Luchtdichtheid"
+            },
             "dew_point_high_day": {
                 "name": "Max. dauwpunt"
             },
@@ -183,6 +186,24 @@
             },
             "wind_speed_bft": {
                 "name": "Windsnelheid (Bft)"
+            },
+            "wind_speed_bft_description": {
+                "name": "Windsnelheid (Bft) beschrijving",
+                "state": {
+                    "calm": "Stil",
+                    "light_air": "Zeer zwak",
+                    "light_breeze": "Zwak",
+                    "gentle_breeze": "Vrij matig",
+                    "moderate_breeze": "Matig",
+                    "fresh_breeze": "Vrij krachtig",
+                    "strong_breeze": "Krachtig",
+                    "high_wind": "Hard",
+                    "gale": "Stormachtig",
+                    "strong_gale": "Storm",
+                    "storm": "Zware storm",
+                    "violent_storm": "Zeer zware storm",
+                    "hurricane_force": "Orkaan"
+                }
             },
             "rain_day": {
                 "name": "Regen (dag)"
