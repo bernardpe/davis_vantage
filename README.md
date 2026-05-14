@@ -52,6 +52,8 @@ Interval between readouts. Every readout takes up about 1-2 seconds for WeatherL
 
 The following entities will be created:
 
+- Air Density:
+    - Current moist air density in kg/m³
 - Barometric Pressure:
     - Current barometric pressure
 - Barometric Pressure High (Day): 
@@ -66,8 +68,6 @@ The following entities will be created:
     - Current barometric trend, being Stable, Rising Slowly, Rising Rapidly, Falling Slowly, Falling Rapidly
 - Dew Point: 
     - Current dev point
-- Air Density:
-    - Current moist air density in kg/m3
 - Dew Point High (Day)
     - Today's highest dew point
 - Dew Point High Time

@@ -232,8 +232,8 @@ def get_sensor_descriptions(model: str) -> list[DavisSensorEntityDescription]:
             entity_name="Air Density",
             icon="mdi:molecule",
             state_class=SensorStateClass.MEASUREMENT,
-            native_unit_of_measurement="kg/m3",
-            suggested_display_precision=3,
+            native_unit_of_measurement="kg/m³",
+            suggested_display_precision=2,
         ),
         DavisSensorEntityDescription(
             key="BarometerHiDay",
