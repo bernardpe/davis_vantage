@@ -189,6 +189,21 @@ def calc_air_density(
     )
     return round(density, 3)
 
+def calc_sea_level_pressure(
+    pressure_inhg: float, temperature_f: float, elevation_ft: float
+) -> float:
+    """Calculate sea level pressure (inHg) from station pressure, temperature and elevation.
+
+    Uses the standard international barometric formula.
+    """
+    elevation_m = elevation_ft * 0.3048
+    temperature_c = convert_to_celcius(temperature_f)
+    slp = pressure_inhg / (
+        (1 - (0.0065 * elevation_m) / (temperature_c + 0.0065 * elevation_m + 273.15))
+        ** 5.2561
+    )
+    return round(slp, 3)
+
 def normalize_unique_id(uid: str) -> str:
     return (
         uid.replace(" ", "_")

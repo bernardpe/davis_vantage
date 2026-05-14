@@ -106,6 +106,9 @@
             "barometric_pressure": {
                 "name": "Luftdruck"
             },
+            "sea_level_pressure": {
+                "name": "Luftdruck auf Meereshöhe"
+            },
             "barometric_pressure_high_day": {
                 "name": "Höchste Luftdruck"
             },

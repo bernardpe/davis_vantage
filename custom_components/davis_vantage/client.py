@@ -18,6 +18,7 @@ from .utils import (
     calc_air_density,
     calc_dew_point,
     calc_feels_like,
+    calc_sea_level_pressure,
     calc_wind_chill,
     contains_correct_raw_data,
     calc_heat_index,
@@ -374,6 +375,9 @@ class DavisVantageClient:
                 if data["Barometer"] is not None:
                     data["AirDensity"] = calc_air_density(
                         data["TempOut"], data["HumOut"], data["Barometer"]
+                    )
+                    data["SeaLevelPressure"] = calc_sea_level_pressure(
+                        data["Barometer"], data["TempOut"], self.elevation
                     )
             if data["WindSpeed"] is not None:
                 data["WindChill"] = calc_wind_chill(data["TempOut"], data["WindSpeed"])

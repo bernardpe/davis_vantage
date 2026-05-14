@@ -227,6 +227,16 @@ def get_sensor_descriptions(model: str) -> list[DavisSensorEntityDescription]:
             suggested_display_precision=2,
         ),
         DavisSensorEntityDescription(
+            key="SeaLevelPressure",
+            translation_key="sea_level_pressure",
+            entity_name="Sea Level Pressure",
+            icon="mdi:wave",
+            device_class=SensorDeviceClass.PRESSURE,
+            state_class=SensorStateClass.MEASUREMENT,
+            native_unit_of_measurement=UnitOfPressure.INHG,
+            suggested_display_precision=2,
+        ),
+        DavisSensorEntityDescription(
             key="AirDensity",
             translation_key="air_density",
             entity_name="Air Density",
