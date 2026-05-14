@@ -132,10 +132,11 @@ class DavisVantageClient:
 
         start_readout = datetime.now()
 
-        if not self._vantagepro2:
-            self._vantagepro2 = self.get_vantagepro2fromurl(self.get_link())
-        if not self._vantagepro2:
-            raise RuntimeError("Could not initialize Davis station connection")
+        if self._vantagepro2 is None:
+            station = self.get_vantagepro2fromurl(self.get_link())
+            if station is None:
+                raise RuntimeError("Could not initialize Davis station connection")
+            self._vantagepro2 = station
 
         try:
             self._vantagepro2.link.open()
