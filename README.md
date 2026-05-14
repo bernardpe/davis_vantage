@@ -114,6 +114,8 @@ The following entities will be created:
     - Total rainfall during an extended period of rain
 - Rain Storm Start Date:
     - Start date of current rain storm. The rain period starts with a minimal of 2 ticks of the precipitation meter (0.4mm or 2/100") and ends after 24h of no rain.
+- Sea Level Pressure:
+    - Barometric pressure normalized to sea level based on station elevation and temperature
 - Solar Radiation: 
     - Current solar radiation
 - Solar Radiation (Day): 
