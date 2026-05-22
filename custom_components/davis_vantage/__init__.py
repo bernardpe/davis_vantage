@@ -13,6 +13,7 @@ from .const import (
     DOMAIN,
     NAME,
     MANUFACTURER,
+    CONFIG_INSTANCE_NAME,
     CONFIG_STATION_MODEL,
     CONFIG_INTERVAL,
     CONFIG_PROTOCOL,
@@ -46,6 +47,9 @@ async def async_setup_entry(
     protocol = config_entry.data.get(CONFIG_PROTOCOL, "")
     link = config_entry.data.get(CONFIG_LINK, "")
     persistent_connection = config_entry.data.get(CONFIG_PERSISTENT_CONNECTION, False)
+    instance_name = config_entry.data.get(
+        CONFIG_INSTANCE_NAME, config_entry.title or NAME
+    )
 
     hass.data[DOMAIN]["interval"] = config_entry.data.get(CONFIG_INTERVAL, 30)
 
@@ -54,7 +58,7 @@ async def async_setup_entry(
     device_info = DeviceInfo(
         identifiers={(DOMAIN, config_entry.entry_id)},
         manufacturer=MANUFACTURER,
-        name=NAME,
+        name=instance_name,
         model=config_entry.data.get(CONFIG_STATION_MODEL, "Unknown"),
         sw_version=None,
         hw_version=None,

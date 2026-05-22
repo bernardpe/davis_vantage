@@ -16,11 +16,13 @@
                 }
             },
             "setup_serial": {
+                "description": "Scegli la porta a cui è collegata la stazione meteorologica.",
                 "data": {
                     "link": "Dispositivo"
                 }
             },
             "setup_network": {
+                "description": "Inserisci i dettagli di configurazione della rete. Esempio: myweatherstation.local:22222",
                 "data": {
                     "link": "Host"
                 }
@@ -28,6 +30,7 @@
             "setup_other_info": {
                 "data": {
                     "station_model": "Modello di stazione meteorologica Davis",
+                    "instance_name": "Nome istanza",
                     "interval": "Intervallo",
                     "persistent_connection": "Connessione persistente"
                 }
@@ -35,12 +38,37 @@
             "reconfigure_confirm": {
                 "description": "Aggiorna la configurazione per {name}.",
                 "data": {
-                    "link": "Host",
+                    "protocol": "Protocollo"
+                }
+            },
+            "reconfigure_setup_serial": {
+                "description": "Aggiorna la configurazione per {name}.",
+                "data": {
+                    "link": "Dispositivo"
+                }
+            },
+            "reconfigure_setup_network": {
+                "description": "Aggiorna la configurazione per {name}.",
+                "data": {
+                    "link": "Host"
+                }
+            },
+            "reconfigure_other_info": {
+                "description": "Aggiorna la configurazione per {name}.",
+                "data": {
                     "interval": "Intervallo"
                 }
             }
         }
     },
+    "selector": {
+        "protocol": {
+            "options": {
+                "Serial": "Seriale / USB",
+                "Network": "Rete"
+            }
+        }
+    }, 
     "entity": {
         "sensor": {
             "last_fetch_time": {

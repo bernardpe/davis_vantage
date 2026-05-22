@@ -16,11 +16,13 @@
                 }
             },
             "setup_serial": {
+                "description": "Choose the port where the weather station is connected.",
                 "data": {
                     "link": "Device"
                 }
             },
             "setup_network": {
+                "description": "Enter the network configuration details. Example: myweatherstation.local:22222",
                 "data": {
                     "link": "Host"
                 }
@@ -28,6 +30,7 @@
             "setup_other_info": {
                 "data": {
                     "station_model": "Davis weather station model",
+                    "instance_name": "Instance name",
                     "interval": "Interval",
                     "persistent_connection": "Persistent Connection"
                 }
@@ -35,12 +38,37 @@
             "reconfigure_confirm": {
                 "description": "Update configuration for {name}.",
                 "data": {
-                    "link": "Host",
+                    "protocol": "Protocol"
+                }
+            },
+            "reconfigure_setup_serial": {
+                "description": "Update configuration for {name}.",
+                "data": {
+                    "link": "Device"
+                }
+            },
+            "reconfigure_setup_network": {
+                "description": "Update configuration for {name}.",
+                "data": {
+                    "link": "Host"
+                }
+            },
+            "reconfigure_other_info": {
+                "description": "Update configuration for {name}.",
+                "data": {
                     "interval": "Interval"
                 }
             }
         }
     },
+    "selector": {
+        "protocol": {
+            "options": {
+                "Serial": "Serial / USB",
+                "Network": "Network"
+            }
+        }
+    }, 
     "entity": {
         "sensor": {
             "last_fetch_time": {

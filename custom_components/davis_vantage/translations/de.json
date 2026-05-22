@@ -16,11 +16,13 @@
                 }
             },
             "setup_serial": {
+                "description": "Wählen Sie den Port, an den die Wetterstation angeschlossen ist.",
                 "data": {
                     "link": "Gerät"
                 }
             },
             "setup_network": {
+                "description": "Geben Sie die Netzwerkkonfigurationsdaten ein. Beispiel: myweatherstation.local:22222",
                 "data": {
                     "link": "Hostname"
                 }
@@ -28,19 +30,44 @@
             "setup_other_info": {
                 "data": {
                     "station_model": "Davis-Wetterstationsmodell",
+                    "instance_name": "Instanzname",
                     "interval": "Intervall"
                 }
             },
             "reconfigure_confirm": {
                 "description": "Neukonfiguration für {name}.",
                 "data": {
-                    "link": "Hostname",
-                    "interval": "Intervall",
-                    "persistent_connection": "Persistente Verbindung"
+                    "protocol": "Protokoll"
+                }
+            },
+            "reconfigure_setup_serial": {
+                "description": "Neukonfiguration für {name}.",
+                "data": {
+                    "link": "Gerät"
+                }
+            },
+            "reconfigure_setup_network": {
+                "description": "Neukonfiguration für {name}.",
+                "data": {
+                    "link": "Hostname"
+                }
+            },
+            "reconfigure_other_info": {
+                "description": "Neukonfiguration für {name}.",
+                "data": {
+                    "interval": "Intervall"
                 }
             }
         }
     },
+    "selector": {
+        "protocol": {
+            "options": {
+                "Serial": "Seriell / USB",
+                "Network": "Netzwerk"
+            }
+        }
+    }, 
     "entity": {
         "sensor": {
             "last_fetch_time": {

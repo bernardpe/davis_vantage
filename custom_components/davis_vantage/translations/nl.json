@@ -16,11 +16,13 @@
                 }
             },
             "setup_serial": {
+                "description": "Kies de poort waar het weerstation is aangesloten.",
                 "data": {
                     "link": "Apparaat"
                 }
             },
             "setup_network": {
+                "description": "Voer de netwerkconfiguratiegegevens in. Voorbeeld: myweatherstation.local:22222",
                 "data": {
                     "link": "Hostnaam"
                 }
@@ -28,6 +30,7 @@
             "setup_other_info": {
                 "data": {
                     "station_model": "Davis weerstation model",
+                    "instance_name": "Instantienaam",
                     "interval": "Interval",
                     "persistent_connection": "Persistente verbinding"
                 }
@@ -35,12 +38,37 @@
             "reconfigure_confirm": {
                 "description": "Bijwerken configuratie voor {name}.",
                 "data": {
-                    "link": "Hostnaam",
+                    "protocol": "Protocol"
+                }
+            },
+            "reconfigure_setup_serial": {
+                "description": "Bijwerken configuratie voor {name}.",
+                "data": {
+                    "link": "Apparaat"
+                }
+            },
+            "reconfigure_setup_network": {
+                "description": "Bijwerken configuratie voor {name}.",
+                "data": {
+                    "link": "Hostnaam"
+                }
+            },
+            "reconfigure_other_info": {
+                "description": "Bijwerken configuratie voor {name}.",
+                "data": {
                     "interval": "Interval"
                 }
             }
         }
     },
+    "selector": {
+        "protocol": {
+            "options": {
+                "Serial": "Serieel / USB",
+                "Network": "Netwerk"
+            }
+        }
+    }, 
     "entity": {
         "sensor": {
             "last_fetch_time": {

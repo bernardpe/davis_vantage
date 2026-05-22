@@ -31,6 +31,7 @@ CONFIG_INTERVAL = "interval"
 CONFIG_MINIMAL_INTERVAL = 5
 CONFIG_PROTOCOL = "protocol"
 CONFIG_LINK = "link"
+CONFIG_INSTANCE_NAME = "instance_name"
 CONFIG_PERSISTENT_CONNECTION = "persistent_connection"
 
 BEAUFORT_DESCRIPTION_STATES: dict[int, str] = {

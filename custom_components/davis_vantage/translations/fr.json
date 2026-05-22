@@ -16,11 +16,13 @@
                 }
             },
             "setup_serial": {
+                "description": "Choisissez le port auquel la station météo est connectée.",
                 "data": {
                     "link": "Appareil"
                 }
             },
             "setup_network": {
+                "description": "Entrez les informations de configuration réseau. Exemple : myweatherstation.local:22222",
                 "data": {
                     "link": "Hôte"
                 }
@@ -28,6 +30,7 @@
             "setup_other_info": {
                 "data": {
                     "station_model": "Modèle de station météo Davis",
+                    "instance_name": "Nom de l'instance",
                     "interval": "Intervalle",
                     "persistent_connection": "Connexion persistante"
                 }
@@ -35,12 +38,37 @@
             "reconfigure_confirm": {
                 "description": "Mettre à jour la configuration pour {name}.",
                 "data": {
-                    "link": "Hôte",
+                    "protocol": "Protocole"
+                }
+            },
+            "reconfigure_setup_serial": {
+                "description": "Mettre à jour la configuration pour {name}.",
+                "data": {
+                    "link": "Appareil"
+                }
+            },
+            "reconfigure_setup_network": {
+                "description": "Mettre à jour la configuration pour {name}.",
+                "data": {
+                    "link": "Hôte"
+                }
+            },
+            "reconfigure_other_info": {
+                "description": "Mettre à jour la configuration pour {name}.",
+                "data": {
                     "interval": "Intervalle"
                 }
             }
         }
     },
+    "selector": {
+        "protocol": {
+            "options": {
+                "Serial": "Série / USB",
+                "Network": "Réseau"
+            }
+        }
+    }, 
     "entity": {
         "sensor": {
             "last_fetch_time": {
