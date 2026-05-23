@@ -61,7 +61,7 @@ async def async_setup_entry(
 
     _LOGGER.debug("entry.data: %s", config_entry.data)
 
-    protocol = config_entry.data.get(CONFIG_PROTOCOL, "")
+    protocol = config_entry.data.get(CONFIG_PROTOCOL, "").lower()
     link = config_entry.data.get(CONFIG_LINK, "")
     persistent_connection = config_entry.data.get(CONFIG_PERSISTENT_CONNECTION, False)
     instance_name = config_entry.data.get(

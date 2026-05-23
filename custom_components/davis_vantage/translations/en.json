@@ -64,8 +64,8 @@
     "selector": {
         "protocol": {
             "options": {
-                "Serial": "Serial / USB",
-                "Network": "Network"
+                "serial": "Serial / USB",
+                "network": "Network"
             }
         }
     }, 
