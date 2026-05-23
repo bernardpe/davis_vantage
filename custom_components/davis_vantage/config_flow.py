@@ -176,7 +176,7 @@ class DavisVantageConfigFlow(ConfigFlow, domain=DOMAIN):
             return self.async_abort(reason="unknown")
 
         self.entry = entry
-        self.protocol = self.entry.data.get(CONFIG_PROTOCOL, PROTOCOL_NETWORK)  # type: ignore
+        self.protocol = self.entry.data.get(CONFIG_PROTOCOL, PROTOCOL_NETWORK).lower()  # type: ignore
         self.link = self.entry.data.get(CONFIG_LINK, "")  # type: ignore
 
         return await self.async_step_reconfigure_confirm()
