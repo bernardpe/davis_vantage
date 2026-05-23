@@ -557,24 +557,52 @@
     "services": {
         "set_davis_time": {
             "name": "Set Davis Time",
-            "description": "Set the time of the Davis weather station"
+            "description": "Set the time of the Davis weather station",
+            "fields": {
+                "device_id": {
+                    "name": "Device",
+                    "description": "Select the Davis Vantage device (integration instance)"
+                }
+            }
         },
         "get_davis_time": {
             "name": "Get Davis Time",
-            "description": "Get the time of the Davis weather station"
+            "description": "Get the time of the Davis weather station",
+            "fields": {
+                "device_id": {
+                    "name": "Device",
+                    "description": "Select the Davis Vantage device (integration instance)"
+                }
+            }
         },
         "get_raw_data": {
             "name": "Get Raw Data",
-            "description": "Get the raw, unprocessed data from the last fetch"
+            "description": "Get the raw, unprocessed data from the last fetch",
+            "fields": {
+                "device_id": {
+                    "name": "Device",
+                    "description": "Select the Davis Vantage device (integration instance)"
+                }
+            }
         },
         "get_info": {
             "name": "Get Information",
-            "description": "Get information about firmware and diagnostics"
+            "description": "Get information about firmware and diagnostics",
+            "fields": {
+                "device_id": {
+                    "name": "Device",
+                    "description": "Select the Davis Vantage device (integration instance)"
+                }
+            }
         },
         "set_yearly_rain": {
             "name": "Set Yearly Rain",
             "description": "Set yearly rain in clicks",
             "fields": {
+                "device_id": {
+                    "name": "Device",
+                    "description": "Select the Davis Vantage device (integration instance)"
+                },
                 "rain_clicks": {
                     "name": "Rain Clicks",
                     "description": "Rain in clicks (depending on setup one click = 0.01\" or 0.2mm)"
@@ -585,6 +613,10 @@
             "name": "Set Archive Period",
             "description": "Set the archive period in minutes. WARNING: All stored archive data will be erased!!!",
             "fields": {
+                "device_id": {
+                    "name": "Device",
+                    "description": "Select the Davis Vantage device (integration instance)"
+                },
                 "archive_period": {
                     "name": "Archive Period",
                     "description": "Archive Period in minutes"
@@ -595,6 +627,10 @@
             "name": "Set Rain Collector",
             "description": "Set the rain collector (0.01\", 0.2 mm or 0.1 mm)",
             "fields": {
+                "device_id": {
+                    "name": "Device",
+                    "description": "Select the Davis Vantage device (integration instance)"
+                },
                 "rain_collector": {
                     "name": "Rain Collector",
                     "description": "Rain Collector setting"

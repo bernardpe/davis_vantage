@@ -557,24 +557,52 @@
     "services": {
         "set_davis_time": {
             "name": "Régler l'heure Davis",
-            "description": "Régler l'heure de la station météo Davis"
+            "description": "Régler l'heure de la station météo Davis",
+            "fields": {
+                "device_id": {
+                    "name": "Appareil",
+                    "description": "Sélectionnez l'appareil Davis Vantage (instance d'intégration)"
+                }
+            }
         },
         "get_davis_time": {
             "name": "Obtenir l'heure Davis",
-            "description": "Obtenir l'heure de la station météo Davis"
+            "description": "Obtenir l'heure de la station météo Davis",
+            "fields": {
+                "device_id": {
+                    "name": "Appareil",
+                    "description": "Sélectionnez l'appareil Davis Vantage (instance d'intégration)"
+                }
+            }
         },
         "get_raw_data": {
             "name": "Obtenir les données brutes",
-            "description": "Obtenir les données brutes non traitées de la dernière récupération"
+            "description": "Obtenir les données brutes non traitées de la dernière récupération",
+            "fields": {
+                "device_id": {
+                    "name": "Appareil",
+                    "description": "Sélectionnez l'appareil Davis Vantage (instance d'intégration)"
+                }
+            }
         },
         "get_info": {
             "name": "Obtenir des informations",
-            "description": "Obtenir des informations sur le micrologiciel et les diagnostics"
+            "description": "Obtenir des informations sur le micrologiciel et les diagnostics",
+            "fields": {
+                "device_id": {
+                    "name": "Appareil",
+                    "description": "Sélectionnez l'appareil Davis Vantage (instance d'intégration)"
+                }
+            }
         },
         "set_yearly_rain": {
             "name": "Définir les précipitations annuelles",
             "description": "Définir les précipitations annuelles en clics",
             "fields": {
+                "device_id": {
+                    "name": "Appareil",
+                    "description": "Sélectionnez l'appareil Davis Vantage (instance d'intégration)"
+                },
                 "rain_clicks": {
                     "name": "Clics de pluie",
                     "description": "Précipitations en clics (selon la configuration, un clic = 0,01 pouce ou 0,2 mm)"
@@ -585,6 +613,10 @@
             "name": "Définir la période d'archivage",
             "description": "Définir la période d'archivage en minutes. AVERTISSEMENT: toutes les données archivées seront effacées !!!",
             "fields": {
+                "device_id": {
+                    "name": "Appareil",
+                    "description": "Sélectionnez l'appareil Davis Vantage (instance d'intégration)"
+                },
                 "archive_period": {
                     "name": "Période d'archivage",
                     "description": "Période d'archivage en minutes"
@@ -595,6 +627,10 @@
             "name": "Définir le collecteur de pluie",
             "description": "Définir le collecteur de pluie (0,01 pouce, 0,2 mm ou 0,1 mm)",
             "fields": {
+                "device_id": {
+                    "name": "Appareil",
+                    "description": "Sélectionnez l'appareil Davis Vantage (instance d'intégration)"
+                },
                 "rain_collector": {
                     "name": "Collecteur de pluie",
                     "description": "Paramètres du collecteur de pluie"

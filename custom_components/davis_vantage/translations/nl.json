@@ -557,24 +557,52 @@
     "services": {
         "set_davis_time": {
             "name": "Stel Davis tijd in",
-            "description": "Stel de tijd van het Davis weerstation in"
+            "description": "Stel de tijd van het Davis weerstation in",
+            "fields": {
+                "device_id": {
+                    "name": "Apparaat",
+                    "description": "Selecteer het Davis Vantage-apparaat (integratie-instantie)"
+                }
+            }
         },
         "get_davis_time": {
             "name": "Haal Davis tijd op",
-            "description": "Haal de tijd vann het Davis weerstation op"
+            "description": "Haal de tijd vann het Davis weerstation op",
+            "fields": {
+                "device_id": {
+                    "name": "Apparaat",
+                    "description": "Selecteer het Davis Vantage-apparaat (integratie-instantie)"
+                }
+            }
         },
         "get_raw_data": {
             "name": "Haal ruwe gegevens op",
-            "description": "Haal de ruwe, onbewerkte gegevens op van de laatste meting"
+            "description": "Haal de ruwe, onbewerkte gegevens op van de laatste meting",
+            "fields": {
+                "device_id": {
+                    "name": "Apparaat",
+                    "description": "Selecteer het Davis Vantage-apparaat (integratie-instantie)"
+                }
+            }
         },
         "get_info": {
             "name": "Haal informatie op",
-            "description": "Haal informatie over de firmware en diagnostiek op"
+            "description": "Haal informatie over de firmware en diagnostiek op",
+            "fields": {
+                "device_id": {
+                    "name": "Apparaat",
+                    "description": "Selecteer het Davis Vantage-apparaat (integratie-instantie)"
+                }
+            }
         },
         "set_yearly_rain": {
             "name": "Stel de jaarlijke neerslag in",
             "description": "Stel de jaarlijkse neerslag in kliks in",
             "fields": {
+                "device_id": {
+                    "name": "Apparaat",
+                    "description": "Selecteer het Davis Vantage-apparaat (integratie-instantie)"
+                },
                 "rain_clicks": {
                     "name": "Regen kliks",
                     "description": "Neerslag in kliks (afhankelijk van de instelling is één klik = 0.01\" of 0.2mm)"
@@ -585,6 +613,10 @@
             "name": "Stel archiefinterval in",
             "description": "Stel de archiefinterval in minuten in. WAARSCHUWING: Alle gearchiveerde data wordt verwijderd!!!",
             "fields": {
+                "device_id": {
+                    "name": "Apparaat",
+                    "description": "Selecteer het Davis Vantage-apparaat (integratie-instantie)"
+                },
                 "archive_period": {
                     "name": "Archiefinterval",
                     "description": "Archiefinterval in minuten"
@@ -595,6 +627,10 @@
             "name": "Stel regenmeter in",
             "description": "Stel de regenmeter in. Keuze uit 0.01\", 0.2 mm of 0.1 mm",
             "fields": {
+                "device_id": {
+                    "name": "Apparaat",
+                    "description": "Selecteer het Davis Vantage-apparaat (integratie-instantie)"
+                },
                 "rain_collector": {
                     "name": "Regenmeter",
                     "description": "Regenmeter instelling"

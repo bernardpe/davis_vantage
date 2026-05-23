@@ -557,24 +557,52 @@
     "services": {
         "set_davis_time": {
             "name": "Imposta ora Davis",
-            "description": "Imposta l'orario della stazione meteorologica Davis"
+            "description": "Imposta l'orario della stazione meteorologica Davis",
+            "fields": {
+                "device_id": {
+                    "name": "Dispositivo",
+                    "description": "Seleziona il dispositivo Davis Vantage (istanza dell'integrazione)"
+                }
+            }
         },
         "get_davis_time": {
             "name": "Ottieni ora Davis",
-            "description": "Ottieni l'orario della stazione meteorologica Davis"
+            "description": "Ottieni l'orario della stazione meteorologica Davis",
+            "fields": {
+                "device_id": {
+                    "name": "Dispositivo",
+                    "description": "Seleziona il dispositivo Davis Vantage (istanza dell'integrazione)"
+                }
+            }
         },
         "get_raw_data": {
             "name": "Ottieni dati grezzi",
-            "description": "Ottieni i dati grezzi non elaborati dall'ultimo recupero"
+            "description": "Ottieni i dati grezzi non elaborati dall'ultimo recupero",
+            "fields": {
+                "device_id": {
+                    "name": "Dispositivo",
+                    "description": "Seleziona il dispositivo Davis Vantage (istanza dell'integrazione)"
+                }
+            }
         },
         "get_info": {
             "name": "Ottieni informazioni",
-            "description": "Ottieni informazioni su firmware e diagnostica"
+            "description": "Ottieni informazioni su firmware e diagnostica",
+            "fields": {
+                "device_id": {
+                    "name": "Dispositivo",
+                    "description": "Seleziona il dispositivo Davis Vantage (istanza dell'integrazione)"
+                }
+            }
         },
         "set_yearly_rain": {
             "name": "Imposta pioggia annuale",
             "description": "Imposta la pioggia annuale in clic",
             "fields": {
+                "device_id": {
+                    "name": "Dispositivo",
+                    "description": "Seleziona il dispositivo Davis Vantage (istanza dell'integrazione)"
+                },
                 "rain_clicks": {
                     "name": "Clic pioggia",
                     "description": "Pioggia in clic (a seconda della configurazione un clic = 0,01\" o 0,2 mm)"
@@ -585,6 +613,10 @@
             "name": "Imposta periodo di archivio",
             "description": "Imposta il periodo di archivio in minuti. ATTENZIONE: tutti i dati di archivio salvati verranno cancellati!!!",
             "fields": {
+                "device_id": {
+                    "name": "Dispositivo",
+                    "description": "Seleziona il dispositivo Davis Vantage (istanza dell'integrazione)"
+                },
                 "archive_period": {
                     "name": "Periodo di archivio",
                     "description": "Periodo di archivio in minuti"
@@ -595,6 +627,10 @@
             "name": "Imposta raccoglitore di pioggia",
             "description": "Imposta il raccoglitore di pioggia (0,01\", 0,2 mm o 0,1 mm)",
             "fields": {
+                "device_id": {
+                    "name": "Dispositivo",
+                    "description": "Seleziona il dispositivo Davis Vantage (istanza dell'integrazione)"
+                },
                 "rain_collector": {
                     "name": "Raccoglitore di pioggia",
                     "description": "Impostazione del raccoglitore di pioggia"

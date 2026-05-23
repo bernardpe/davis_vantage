@@ -4,7 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 import logging
 
-from homeassistant.config_entries import ConfigEntry
+from homeassistant.config_entries import ConfigEntry, ConfigEntryState
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.const import Platform
@@ -19,6 +19,13 @@ from .const import (
     CONFIG_PROTOCOL,
     CONFIG_LINK,
     CONFIG_PERSISTENT_CONNECTION,
+    SERVICE_SET_DAVIS_TIME,
+    SERVICE_GET_DAVIS_TIME,
+    SERVICE_GET_RAW_DATA,
+    SERVICE_GET_INFO,
+    SERVICE_SET_YEARLY_RAIN,
+    SERVICE_SET_ARCHIVE_PERIOD,
+    SERVICE_SET_RAIN_COLLECTOR,
 )
 from .coordinator import DavisVantageDataUpdateCoordinator
 from .services import DavisServicesSetup
@@ -26,6 +33,16 @@ from .services import DavisServicesSetup
 PLATFORMS: list[Platform] = [Platform.SENSOR, Platform.BINARY_SENSOR]
 
 _LOGGER: logging.Logger = logging.getLogger(__package__)
+
+SERVICES = [
+    SERVICE_SET_DAVIS_TIME,
+    SERVICE_GET_DAVIS_TIME,
+    SERVICE_GET_RAW_DATA,
+    SERVICE_GET_INFO,
+    SERVICE_SET_YEARLY_RAIN,
+    SERVICE_SET_ARCHIVE_PERIOD,
+    SERVICE_SET_RAIN_COLLECTOR,
+]
 
 
 @dataclass
@@ -81,7 +98,8 @@ async def async_setup_entry(
         config_entry.add_update_listener(async_reload_entry)
     )
 
-    DavisServicesSetup(hass, config_entry)
+    if not hass.services.has_service(DOMAIN, SERVICE_SET_DAVIS_TIME):
+        DavisServicesSetup(hass)
 
     return True
 
@@ -90,9 +108,20 @@ async def async_unload_entry(hass: HomeAssistant, config_entry: DavisConfigEntry
     """Unload a config entry."""
     coordinator = config_entry.runtime_data.coordinator
     coordinator.client._executor.shutdown(wait=False)
-    return await hass.config_entries.async_unload_platforms(
+    unload_ok = await hass.config_entries.async_unload_platforms(
         config_entry, PLATFORMS
     )
+
+    loaded_entries = [
+        entry
+        for entry in hass.config_entries.async_entries(DOMAIN)
+        if entry.state == ConfigEntryState.LOADED
+    ]
+    if unload_ok and not loaded_entries:
+        for service in SERVICES:
+            hass.services.async_remove(DOMAIN, service)
+
+    return unload_ok
 
 async def async_reload_entry(hass: HomeAssistant, config_entry: DavisConfigEntry) -> None:
     """Reload config entry."""

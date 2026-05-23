@@ -1,9 +1,42 @@
 set_davis_time:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: davis_vantage
+
 get_davis_time:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: davis_vantage
+
 get_raw_data:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: davis_vantage
+
 get_info:
+  fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: davis_vantage
+
 set_yearly_rain:
   fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: davis_vantage
     rain_clicks:
       required: true
       example: 500
@@ -11,6 +44,11 @@ set_yearly_rain:
         number:
 set_archive_period:
   fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: davis_vantage
     archive_period:
       required: true
       example: 10
@@ -26,6 +64,11 @@ set_archive_period:
             - "120"
 set_rain_collector:
   fields:
+    device_id:
+      required: true
+      selector:
+        device:
+          integration: davis_vantage
     rain_collector:
       required: true
       example: "0.2 mm"

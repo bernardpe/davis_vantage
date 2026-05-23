@@ -556,24 +556,52 @@
     "services": {
         "set_davis_time": {
             "name": "Davis-Zeit einstellen",
-            "description": "Die Zeit der Davis-Wetterstation einstellen"
+            "description": "Die Zeit der Davis-Wetterstation einstellen",
+            "fields": {
+                "device_id": {
+                    "name": "Gerät",
+                    "description": "Wählen Sie das Davis Vantage-Gerät (Integrationsinstanz)"
+                }
+            }
         },
         "get_davis_time": {
             "name": "Davis-Zeit abrufen",
-            "description": "Die Zeit der Davis-Wetterstation abrufen"
+            "description": "Die Zeit der Davis-Wetterstation abrufen",
+            "fields": {
+                "device_id": {
+                    "name": "Gerät",
+                    "description": "Wählen Sie das Davis Vantage-Gerät (Integrationsinstanz)"
+                }
+            }
         },
         "get_raw_data": {
             "name": "Rohdaten abrufen",
-            "description": "Die rohen, unverarbeiteten Daten des letzten Abrufs abrufen"
+            "description": "Die rohen, unverarbeiteten Daten des letzten Abrufs abrufen",
+            "fields": {
+                "device_id": {
+                    "name": "Gerät",
+                    "description": "Wählen Sie das Davis Vantage-Gerät (Integrationsinstanz)"
+                }
+            }
         },
         "get_info": {
             "name": "Informationen abrufen",
-            "description": "Informationen über Firmware und Diagnose abrufen"
+            "description": "Informationen über Firmware und Diagnose abrufen",
+            "fields": {
+                "device_id": {
+                    "name": "Gerät",
+                    "description": "Wählen Sie das Davis Vantage-Gerät (Integrationsinstanz)"
+                }
+            }
         },
         "set_yearly_rain": {
             "name": "Jährlichen Niederschlag einstellen",
             "description": "Jährlichen Niederschlag in Klicks einstellen",
             "fields": {
+                "device_id": {
+                    "name": "Gerät",
+                    "description": "Wählen Sie das Davis Vantage-Gerät (Integrationsinstanz)"
+                },
                 "rain_clicks": {
                     "name": "Regen-Klicks",
                     "description": "Regen in Klicks (je nach Einrichtung entspricht ein Klick 0,01\" oder 0,2 mm)"
@@ -584,6 +612,10 @@
             "name": "Archivierungsperiode einstellen",
             "description": "Die Archivierungsperiode in Minuten einstellen. WARNUNG: Alle gespeicherten Archivdaten werden gelöscht!!!",
             "fields": {
+                "device_id": {
+                    "name": "Gerät",
+                    "description": "Wählen Sie das Davis Vantage-Gerät (Integrationsinstanz)"
+                },
                 "archive_period": {
                     "name": "Archivierungsperiode",
                     "description": "Archivierungsperiode in Minuten"
@@ -594,6 +626,10 @@
             "name": "Regensammler einstellen",
             "description": "Die Regensammler einstellen (0.01\", 0.2 mm oder 0.1 mm)",
             "fields": {
+                "device_id": {
+                    "name": "Gerät",
+                    "description": "Wählen Sie das Davis Vantage-Gerät (Integrationsinstanz)"
+                },
                 "rain_collector": {
                     "name": "Regensammler",
                     "description": "Regensammler Einstellung"
