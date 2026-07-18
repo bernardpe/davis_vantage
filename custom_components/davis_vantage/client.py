@@ -412,11 +412,16 @@ class DavisVantageClient:
         data["SunRise"] = self.strtotime(data["SunRise"])
         data["SunSet"] = self.strtotime(data["SunSet"])
 
-        for key, value in list(data.items()):
-            if key.startswith(("ExtraTemps", "LeafTemps", "SoilTemps")):
-                if value is not None:
-                    data[key] = get_temp_add_sensor(value)
-
+        for i in range(1, 8):
+            temp_key = f"ExtraTemps{i:02d}"
+            if temp_key in data and data[temp_key] is not None:
+                data[temp_key] = get_temp_add_sensor(data[temp_key])
+        
+        for typekey in ("LeafTemps", "SoilTemps"):
+            for i in range(1, 4):
+                temp_key = f"{typekey}{i:02d}"
+                if temp_key in data and data[temp_key] is not None:
+                    data[temp_key] = get_temp_add_sensor(data[temp_key])
 
         self.correct_rain_values(data)
 
