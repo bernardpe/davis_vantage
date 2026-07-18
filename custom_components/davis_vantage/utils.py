@@ -158,6 +158,9 @@ def get_uv(value: int) -> float:
 def get_solar_rad(value: int) -> float:
     return value
 
+def get_temp_add_sensor(value: int) -> int:
+    return value - 90
+
 def calc_dew_point(temperature_f: float, humidity: float) -> float:
     temperature_c = convert_to_celcius(temperature_f)
     a = math.log(humidity / 100) + (17.62 * temperature_c / (243.12 + temperature_c))

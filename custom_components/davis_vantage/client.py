@@ -29,6 +29,7 @@ from .utils import (
     get_solar_rad,
     get_uv,
     get_wind_rose,
+    get_temp_add_sensor,
 )
 from .const import (
     BEAUFORT_DESCRIPTION_STATES,
@@ -410,6 +411,13 @@ class DavisVantageClient:
         data["StormStartDate"] = self.strtodate(data["StormStartDate"])
         data["SunRise"] = self.strtotime(data["SunRise"])
         data["SunSet"] = self.strtotime(data["SunSet"])
+
+        for key, value in list(data.items()):
+            if key.startswith(("ExtraTemps", "LeafTemps", "SoilTemps")):
+                if value is not None:
+                    data[key] = get_temp_add_sensor(value)
+
+
         self.correct_rain_values(data)
 
     def correct_rain_values(self, data: dict[str, Any]):
