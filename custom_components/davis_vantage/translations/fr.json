@@ -529,6 +529,54 @@
             "extra_humidity_7": {
                 "name": "Humidité supplémentaire 7"
             },
+            "soil_temperature_1": {
+                "name": "Température du sol 1"
+            },
+            "soil_temperature_2": {
+                "name": "Température du sol 2"
+            },
+            "soil_temperature_3": {
+                "name": "Température du sol 3"
+            },
+            "soil_temperature_4": {
+                "name": "Température du sol 4"
+            },
+            "soil_moisture_1": {
+                "name": "Humidité du sol 1"
+            },
+            "soil_moisture_2": {
+                "name": "Humidité du sol 2"
+            },
+            "soil_moisture_3": {
+                "name": "Humidité du sol 3"
+            },
+            "soil_moisture_4": {
+                "name": "Humidité du sol 4"
+            },
+            "leaf_temperature_1": {
+                "name": "Température de la feuille 1"
+            },
+            "leaf_temperature_2": {
+                "name": "Température de la feuille 2"
+            },
+            "leaf_temperature_3": {
+                "name": "Température de la feuille 3"
+            },
+            "leaf_temperature_4": {
+                "name": "Température de la feuille 4"
+            },
+            "leaf_wetness_1": {
+                "name": "Humidité de la feuille 1"
+            },
+            "leaf_wetness_2": {
+                "name": "Humidité de la feuille 2"
+            },
+            "leaf_wetness_3": {
+                "name": "Humidité de la feuille 3"
+            },
+            "leaf_wetness_4": {
+                "name": "Humidité de la feuille 4"
+            },
             "latitude": {
                 "name": "Latitude"
             },

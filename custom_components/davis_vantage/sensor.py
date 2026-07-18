@@ -610,6 +610,56 @@ def get_sensor_descriptions(model: str) -> list[DavisSensorEntityDescription]:
             )
             for probe in range(1, 8)
         ],
+        *[
+            DavisSensorEntityDescription(
+                key=f"SoilTemps0{probe}",
+                translation_key=f"soil_temperature_{probe}",
+                entity_name=f"Soil Temperature {probe}",
+                native_unit_of_measurement=UnitOfTemperature.FAHRENHEIT,
+                device_class=SensorDeviceClass.TEMPERATURE,
+                state_class=SensorStateClass.MEASUREMENT,
+                entity_registry_enabled_default=False,
+                suggested_display_precision=1,
+            )
+            for probe in range(1, 5)
+        ],
+        *[
+            DavisSensorEntityDescription(
+                key=f"SoilMoist0{probe}",
+                translation_key=f"soil_moisture_{probe}",
+                entity_name=f"Soil Moisture {probe}",
+                device_class=SensorDeviceClass.HUMIDITY,
+                native_unit_of_measurement=PERCENTAGE,
+                suggested_display_precision=0,
+                entity_registry_enabled_default=False,
+            )
+            for probe in range(1, 5)
+        ],
+        *[
+            DavisSensorEntityDescription(
+                key=f"LeafTemps0{probe}",
+                translation_key=f"leaf_temperature_{probe}",
+                entity_name=f"Leaf Temperature {probe}",
+                native_unit_of_measurement=UnitOfTemperature.FAHRENHEIT,
+                device_class=SensorDeviceClass.TEMPERATURE,
+                state_class=SensorStateClass.MEASUREMENT,
+                entity_registry_enabled_default=False,
+                suggested_display_precision=1,
+            )
+            for probe in range(1, 5)
+        ],
+        *[
+            DavisSensorEntityDescription(
+                key=f"LeafWetness0{probe}",
+                translation_key=f"leaf_wetness_{probe}",
+                entity_name=f"Leaf Wetness {probe}",
+                device_class=SensorDeviceClass.HUMIDITY,
+                native_unit_of_measurement=PERCENTAGE,
+                suggested_display_precision=0,
+                entity_registry_enabled_default=False,
+            )
+            for probe in range(1, 5)
+        ],
         DavisSensorEntityDescription(
             key="Latitude",
             translation_key="latitude",

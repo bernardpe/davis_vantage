@@ -529,6 +529,54 @@
             "extra_humidity_7": {
                 "name": "Umidità Extra 7"
             },
+            "soil_temperature_1": {
+                "name": "Temperatura del Suolo 1"
+            },
+            "soil_temperature_2": {
+                "name": "Temperatura del Suolo 2"
+            },
+            "soil_temperature_3": {
+                "name": "Temperatura del Suolo 3"
+            },
+            "soil_temperature_4": {
+                "name": "Temperatura del Suolo 4"
+            },
+            "soil_moisture_1": {
+                "name": "Umidità del Suolo 1"
+            },
+            "soil_moisture_2": {
+                "name": "Umidità del Suolo 2"
+            },
+            "soil_moisture_3": {
+                "name": "Umidità del Suolo 3"
+            },
+            "soil_moisture_4": {
+                "name": "Umidità del Suolo 4"
+            },
+            "leaf_temperature_1": {
+                "name": "Temperatura della Foglia 1"
+            },
+            "leaf_temperature_2": {
+                "name": "Temperatura della Foglia 2"
+            },
+            "leaf_temperature_3": {
+                "name": "Temperatura della Foglia 3"
+            },
+            "leaf_temperature_4": {
+                "name": "Temperatura della Foglia 4"
+            },
+            "leaf_wetness_1": {
+                "name": "Umidità della Foglia 1"
+            },
+            "leaf_wetness_2": {
+                "name": "Umidità della Foglia 2"
+            },
+            "leaf_wetness_3": {
+                "name": "Umidità della Foglia 3"
+            },
+            "leaf_wetness_4": {
+                "name": "Umidità della Foglia 4"
+            },
             "latitude": {
                 "name": "Latitudine"
             },

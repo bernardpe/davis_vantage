@@ -529,6 +529,54 @@
             "extra_humidity_7": {
                 "name": "Extra luchtvochtigheid 7"
             },
+            "soil_temperature_1": {
+                "name": "Bodemtemperatuur 1"
+            },
+            "soil_temperature_2": {
+                "name": "Bodemtemperatuur 2"
+            },
+            "soil_temperature_3": {
+                "name": "Bodemtemperatuur 3"
+            },
+            "soil_temperature_4": {
+                "name": "Bodemtemperatuur 4"
+            },
+            "soil_moisture_1": {
+                "name": "Bodemvochtigheid 1"
+            },
+            "soil_moisture_2": {
+                "name": "Bodemvochtigheid 2"
+            },
+            "soil_moisture_3": {
+                "name": "Bodemvochtigheid 3"
+            },
+            "soil_moisture_4": {
+                "name": "Bodemvochtigheid 4"
+            },
+            "leaf_temperature_1": {
+                "name": "Bladtemperatuur 1"
+            },
+            "leaf_temperature_2": {
+                "name": "Bladtemperatuur 2"
+            },
+            "leaf_temperature_3": {
+                "name": "Bladtemperatuur 3"
+            },
+            "leaf_temperature_4": {
+                "name": "Bladtemperatuur 4"
+            },
+            "leaf_wetness_1": {
+                "name": "Bladvochtigheid 1"
+            },
+            "leaf_wetness_2": {
+                "name": "Bladvochtigheid 2"
+            },
+            "leaf_wetness_3": {
+                "name": "Bladvochtigheid 3"
+            },
+            "leaf_wetness_4": {
+                "name": "Bladvochtigheid 4"
+            },
             "latitude": {
                 "name": "Breedtegraad"
             },

@@ -528,6 +528,54 @@
             "extra_humidity_7": {
                 "name": "Zusätzliche Luftfeuchtigkeit 7"
             },
+            "soil_temperature_1": {
+                "name": "Bodentemperatur 1"
+            },
+            "soil_temperature_2": {
+                "name": "Bodentemperatur 2"
+            },
+            "soil_temperature_3": {
+                "name": "Bodentemperatur 3"
+            },
+            "soil_temperature_4": {
+                "name": "Bodentemperatur 4"
+            },
+            "soil_moisture_1": {
+                "name": "Bodenfeuchtigkeit 1"
+            },
+            "soil_moisture_2": {
+                "name": "Bodenfeuchtigkeit 2"
+            },
+            "soil_moisture_3": {
+                "name": "Bodenfeuchtigkeit 3"
+            },
+            "soil_moisture_4": {
+                "name": "Bodenfeuchtigkeit 4"
+            },
+            "leaf_temperature_1": {
+                "name": "Blatttemperatur 1"
+            },
+            "leaf_temperature_2": {
+                "name": "Blatttemperatur 2"
+            },
+            "leaf_temperature_3": {
+                "name": "Blatttemperatur 3"
+            },
+            "leaf_temperature_4": {
+                "name": "Blatttemperatur 4"
+            },
+            "leaf_wetness_1": {
+                "name": "Blattfeuchtigkeit 1"
+            },
+            "leaf_wetness_2": {
+                "name": "Blattfeuchtigkeit 2"
+            },
+            "leaf_wetness_3": {
+                "name": "Blattfeuchtigkeit 3"
+            },
+            "leaf_wetness_4": {
+                "name": "Blattfeuchtigkeit 4"
+            },
             "latitude": {
                 "name": "Breitengrad"
             },
